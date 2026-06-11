@@ -1157,7 +1157,7 @@
       transform: translateY(0);
     }
 
-    /* ─── DEMO VIDEO PLACEHOLDER ─── */
+    /* ─── DEMO VIDEO ─── */
     .demo-wrapper {
       position: relative;
       z-index: 2;
@@ -1166,16 +1166,34 @@
       overflow: hidden;
       border: 1px solid rgba(26,79,255,0.25);
       box-shadow: 0 40px 100px rgba(0,0,0,0.5);
-      background: var(--navy-mid);
+      background: #000;
       aspect-ratio: 16/9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       cursor: pointer;
     }
 
-    .demo-placeholder {
+    .demo-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .demo-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(6,9,26,0.55);
+      backdrop-filter: blur(4px);
+      transition: opacity 0.4s ease;
       text-align: center;
+    }
+
+    .demo-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
 
     .play-btn {
@@ -1198,7 +1216,7 @@
 
     .play-btn svg { margin-left: 4px; }
 
-    .demo-placeholder p {
+    .demo-overlay p {
       font-family: var(--font-display);
       font-size: 1rem;
       color: var(--muted);
@@ -1346,7 +1364,8 @@
 
   <!-- DEMO VIDEO -->
   <div class="demo-wrapper reveal" id="demo">
-    <div class="demo-placeholder">
+    <video class="demo-video" src="InsureTrackDemo.mp4" playsinline preload="metadata"></video>
+    <div class="demo-overlay">
       <div class="play-btn">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <path d="M8 5l16 9-16 9V5z" fill="white"/>
@@ -1660,6 +1679,16 @@
       lastScroll = curr;
     });
     nav.style.transition = 'transform 0.3s ease';
+
+    // Demo video click-to-play
+    const demoWrapper = document.getElementById('demo');
+    const demoVideo = demoWrapper.querySelector('.demo-video');
+    const demoOverlay = demoWrapper.querySelector('.demo-overlay');
+    demoWrapper.addEventListener('click', () => {
+      demoOverlay.classList.add('hidden');
+      demoVideo.controls = true;
+      demoVideo.play();
+    });
 
     // Animate stat numbers
     function animateCount(el, target, suffix = '') {
