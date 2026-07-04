@@ -1688,7 +1688,7 @@
       demoOverlay.classList.add('hidden');
       demoVideo.controls = true;
       demoVideo.play();
-    });
+    }, { once: true });
 
     // Animate stat numbers
     function animateCount(el, target, suffix = '') {
