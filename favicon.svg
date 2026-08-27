@@ -4,7 +4,7 @@
       <rect x="-1000" y="-1000" width="2000" height="2000" fill="white" />
       <path d="M-2.93 -8.43 A 11 11 0 0 1 0.96 -0.96" fill="none" stroke="black" stroke-width="6" />
     </mask>
-    <g mask="url(#favicon-mask)" opacity="0.58">
+    <g mask="url(#favicon-mask)">
       <circle cx="10" cy="0" r="11" fill="none" stroke="#0033f5" stroke-width="6"
         stroke-linecap="round" stroke-dasharray="53 70" transform="rotate(-4 10 0)" />
     </g>
