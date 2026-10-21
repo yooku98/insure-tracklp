@@ -7,7 +7,7 @@ Marketing landing page for Yooku, a broker management platform for insurance bro
 ## What's on the page
 
 - Product hero and feature overview
-- Embedded product demo video (`InsureTrackDemo.mp4`)
+- Embedded product demo video (`yooku-promo.mp4`)
 - Onboarding steps and transparent pricing (from GHS 290/month)
 - Call-to-action and support contact
 
@@ -19,7 +19,7 @@ A single `index.html` with inline CSS/JS. No build step.
 
 ```
 index.html           Landing page
-InsureTrackDemo.mp4  Product demo video
+yooku-promo.mp4      Product promo video (30s, square)
 og-image.png         Social share image
 favicon.svg / -32.png
 CNAME                Custom domain (yooku.africa)

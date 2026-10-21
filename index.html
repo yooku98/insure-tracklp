@@ -1199,13 +1199,14 @@
     .demo-wrapper {
       position: relative;
       z-index: 2;
-      margin: -20px 48px 0;
+      width: min(640px, calc(100% - 96px));
+      margin: -20px auto 0;
       border-radius: 20px;
       overflow: hidden;
       border: 1px solid rgba(26,79,255,0.25);
       box-shadow: 0 40px 100px rgba(0,0,0,0.5);
       background: #000;
-      aspect-ratio: 16/9;
+      aspect-ratio: 1/1;
       cursor: pointer;
     }
 
@@ -1275,7 +1276,7 @@
       .how-steps { grid-template-columns: repeat(2,1fr); gap: 40px; }
       .how-steps::before { display: none; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
-      .demo-wrapper { margin: -20px 24px 0; }
+      .demo-wrapper { width: calc(100% - 48px); }
       footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
       .cta-section { padding: 80px 24px; }
     }
@@ -1326,7 +1327,7 @@
         Yooku is the all-in-one broker management platform purpose-built for Ghana and Africa — with AI-powered insights, automated renewal tracking, commissions management, and one-tap WhatsApp reminders sent from your own number.
       </p>
       <div class="hero-actions">
-        <a href="https://app.yooku.africa/signup" class="btn-primary">Start Free Trial</a>
+        <a href="https://wa.me/233557507660?text=Hi%20Yooku%2C%20I%27d%20like%20to%20book%20a%20demo%20for%20my%20brokerage." class="btn-primary" target="_blank" rel="noopener">Book a demo</a>
         <a href="#demo" class="btn-secondary">
           Watch demo
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -1415,14 +1416,14 @@
 
   <!-- DEMO VIDEO -->
   <div class="demo-wrapper reveal" id="demo">
-    <video class="demo-video" src="InsureTrackDemo.mp4" playsinline preload="metadata"></video>
+    <video class="demo-video" src="yooku-promo.mp4" playsinline preload="metadata"></video>
     <div class="demo-overlay">
       <div class="play-btn">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <path d="M8 5l16 9-16 9V5z" fill="white"/>
         </svg>
       </div>
-      <p>See Yooku (formerly InsureTrack) in action — 90 second demo</p>
+      <p>See Yooku in action — 30 seconds</p>
     </div>
   </div>
 
@@ -1602,8 +1603,8 @@
     <div class="how-steps">
       <div class="how-step reveal">
         <div class="how-step-num">1</div>
-        <h3>Sign Up</h3>
-        <p>Create your account and choose a plan. No credit card required for the 30-day trial.</p>
+        <h3>Book a Demo</h3>
+        <p>Message us on WhatsApp for a short walkthrough. We set up your account and pick the right plan with you.</p>
       </div>
       <div class="how-step reveal">
         <div class="how-step-num">2</div>
@@ -1628,7 +1629,7 @@
     <div class="pricing-header reveal">
       <div class="section-tag">Simple Pricing</div>
       <h2 class="section-title">Transparent. No surprises.</h2>
-      <p class="section-sub" style="margin: 0 auto;">All plans include a 30-day free trial, no card required. Upgrade anytime with secure online payment via Hubtel.</p>
+      <p class="section-sub" style="margin: 0 auto;">Book a demo and we'll get your account set up. Pay securely online via Hubtel.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card reveal">
@@ -1645,7 +1646,7 @@
           <li>Client share portal</li>
           <li>Excel export &amp; bulk import</li>
         </ul>
-        <a href="https://app.yooku.africa/signup" class="btn-plan btn-plan-outline">Start Free Trial</a>
+        <a href="https://wa.me/233557507660?text=Hi%20Yooku%2C%20I%20would%20like%20to%20book%20a%20demo%20of%20the%20Solo%20Broker%20plan." class="btn-plan btn-plan-outline" target="_blank" rel="noopener">Book a demo</a>
       </div>
       <div class="pricing-card featured reveal">
         <div class="pricing-badge">Most Popular</div>
@@ -1661,7 +1662,7 @@
           <li>Weekly AI Digest — every Monday morning</li>
           <li>Custom agency branding &amp; logo</li>
         </ul>
-        <a href="https://app.yooku.africa/signup" class="btn-plan btn-plan-primary">Start Free Trial</a>
+        <a href="https://wa.me/233557507660?text=Hi%20Yooku%2C%20I%20would%20like%20to%20book%20a%20demo%20of%20the%20Agency%20plan." class="btn-plan btn-plan-primary" target="_blank" rel="noopener">Book a demo</a>
       </div>
       <div class="pricing-card reveal">
         <div class="pricing-plan">Enterprise</div>
@@ -1696,11 +1697,11 @@
   <section class="cta-section">
     <div class="section-tag reveal" style="text-align:center;">Get Started Today</div>
     <h2 class="section-title reveal">Ready to run a smarter brokerage?</h2>
-    <p class="section-sub reveal">Join Yooku and take control of your policies, renewals, and commissions — starting today. 30-day free trial, no card required.</p>
+    <p class="section-sub reveal">Join Yooku and take control of your policies, renewals, and commissions — starting today.</p>
     <div class="cta-actions reveal">
-      <a href="https://app.yooku.africa" class="btn-primary">Launch Yooku</a>
-      <a href="mailto:support@yooku.africa" class="btn-secondary">
-        Book a demo
+      <a href="https://wa.me/233557507660?text=Hi%20Yooku%2C%20I%27d%20like%20to%20book%20a%20demo%20for%20my%20brokerage." class="btn-primary" target="_blank" rel="noopener">Book a demo</a>
+      <a href="https://app.yooku.africa" class="btn-secondary">
+        Launch Yooku
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
